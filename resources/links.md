@@ -1,8 +1,8 @@
-# Links
-Behold my links, laid bare for all to see! If you wish to leave, begone!
 |🔙 [Go Back Home](../README.md)|
 |------------------|
 
+# Links
+Behold my links, laid bare for all to see!
 
 ## On the Air
  

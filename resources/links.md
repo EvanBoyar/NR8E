@@ -9,20 +9,23 @@ Behold my links, laid bare for all to see!
 - [CW QSO Finder](https://qsofinder.com/)
 - [SOTlas](https://sotl.as/)
 - [SOTA Activation Zone Estimator - By: N6ARA](https://activation.zone/)
+- [Submit your SOTA logs](https://www.sotadata.org.uk/en/stats) `//why does SOTA have to have 4 sites???`
 - [Field Spotter](https://fieldspotter.radio/)
 - [KC2RC stream](http://kc2rc.ddns.net:8000/stream)
 - [Real Time QSO Map](https://rtqm.beta.qrz.com/qsomap)
 - [Parks on the Air | POTA](https://pota.app/#/)
 - [HFU HF Underground - Index](https://www.hfunderground.com/board/)
-## (Radio, top level)
+## Local Stuff
  
 - [KB2NGU Repeater – Brooklyn, NY](https://www.repeaterbook.com/repeaters/details.php?state_id=36&ID=2818)
+- [Ham Radio - NYC Resistor Wiki](https://wiki.nycresistor.com/wiki/Ham_Radio#N2YCR_Club)
 ## Radio Reads
  
 - [The Communicator Digital Edition](https://ve7sar.blogspot.com/)
 - [QRP ARCI - QRP Amateur Radio Club International](https://www.qrparci.org/)
 - [W7DK Newsletter](https://w7dk.org/newsletter)
 - [Q R P e r | Connecting an international community through low-power field radio adventures.](https://qrper.com/)
+- [SOTA Reflector](https://reflector.sota.org.uk/)
 ## Me?
  
 - [Display Reception Reports](https://pskreporter.info/pskmap?callsign=nr8e&search=Find)
@@ -47,27 +50,23 @@ Behold my links, laid bare for all to see!
 - [CW Cheat-sheet](https://mckoss.com/morse-keyer/cheat-sheet.html)
 - [VBand - Ham Radio Solutions](https://hamradio.solutions/vband/)
 - [didah - Learn Morse Code](https://didah.app/session/head-copy)
-## Broadcasts
+## Broadcasts & the Like
  
 - [W1AW Operating Schedule](https://www.arrl.org/w1aw-operating-schedule)
 - [Radio Garden](https://radio.garden/)
 - [Short-Wave Radio Frequency Schedule for BBC in ENGLISH](https://short-wave.info/)
 - [New York City County, New York (NY) Scanner Frequencies and Radio Frequency Reference](https://www.radioreference.com/db/browse/ctid/1855)
-### Best Shortwave
- 
 - [Short-Wave Radio Frequency Schedule for VOICE OF TURKEY in ANY LANGUAGE](https://www.short-wave.info/index.php?station=Voice%20of%20Turkey)
-## (Radio, top level continued)
+
+## Unfiled
  
-- [SOTA Reflector](https://reflector.sota.org.uk/)
-- [Pat (localhost)](http://localhost:8080/ui#)
+- [Pat (localhost)](http://localhost:8080/ui#): only helpful if you're actively running Pat at the moment
 - [3-Day Forecast | NOAA / NWS Space Weather Prediction Center](https://www.spaceweather.gov/products/3-day-forecast)
-- [WA7BNM Contest Calendar: 8-Day Calendar](https://www.contestcalendar.com/weeklycont.php)
 - [AE7Q's Amateur Radio Database Query Tools](https://www.ae7q.com/query/)
 - [Amateur Radio License Map | Ham Info](https://haminfo.tetranz.com/map/NR8E)
-- [Ham Radio - NYC Resistor Wiki](https://wiki.nycresistor.com/wiki/Ham_Radio#N2YCR_Club)
 - [License Search](https://wireless2.fcc.gov/UlsApp/UlsSearch/searchLicense.jsp)
 - [APRS Passcode Generator - Passcode](http://apps.magicbug.co.uk/passcode/index.php/passcode)
 - [AMSAT OSCAR Satellite Status](https://www.amsat.org/status/)
 - [Satellite Predictions Passes for Amateur Radio Satellites](https://www.n2yo.com/passes/amateur-radio.php)
 - [HF Propagation and Solar-Terrestrial Data Website](https://www.hamqsl.com/solar.html)
-
+- [WA7BNM Contest Calendar: 8-Day Calendar](https://www.contestcalendar.com/weeklycont.php)

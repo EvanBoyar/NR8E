@@ -51,9 +51,9 @@ I haven't tested this out, so ymmv
     "cwid_enabled": true
   },
 ```
-4. Find your rig's special code
-   For the Yaesu FTDX-1200 it's 1034. I found that by running:
-```you@yourmachine:~$ rigctl -l | grep -e FTDX-1200 -e Model
+4. Find your rig's special code. For the Yaesu FTDX-1200 it's 1034. I found that by running:
+```
+you@yourmachine:~$ rigctl -l | grep -e FTDX-1200 -e Model
  Rig #  Mfg                    Model                   Version         Status      Macro
   1034  Yaesu                  FTDX-1200               20230328.5      Stable      RIG_MODEL_FTDX1200
 ```

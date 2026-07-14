@@ -7,6 +7,57 @@
 
 **The one rule:** only one program may own `/dev/ttyUSB0` (serial) or the sound card at a time. Close FLRig and QSSTV before starting Pat, and vice versa.
 
+# Installation
+1. Install Pat
+Go to the [latest release of Pat](https://github.com/la5nta/pat/releases/latest) and download the .deb and install as you would any normal .deb because it is a normal .deb.
+2. Install ARDOP:
+```
+sudo wget -O /usr/local/bin/ardopc64 "http://www.cantab.net/users/john.wiseman/Downloads/ardopc64"
+sudo chmod +x /usr/local/bin/ardopc64
+sudo apt install -f # this gets your pesky dependencies
+```
+Note that the Pat wiki suggests that you
+>Consider Peter LaRue's fork [ardopcf](https://github.com/pflarue/ardop) instead. It includes many [improvements and bug fixes](https://github.com/pflarue/ardop/blob/master/changelog.md).
+
+I haven't tested this out, so ymmv
+3. Configre Pat (see below)
+
+# Below (Pat config)
+0. Open a terminal instance and type `pat configure` or simply navigate to wherever pat's config file lives (if this is your first time running it, it's possible that it's not there yet unless you make it or run `pat configure`, but in any case it probably is in `~/.config/pat/config.json`)
+1. add your call sign to "mycall", your Winlink password to "secure_login_password", and your 6-character grid-square to "locator" (this one is useful so it can use VOACAP to predict which Winlink Remote Message Server will be best)
+2. Edit your rig
+```
+"listen": [],
+  "hamlib_rigs": {
+    "ftdx1200": {
+      "network": "tcp",
+      "address": "localhost:4532",
+      "VFO": ""
+```
+3. Edit ARDOP's connection and ensure that the rig matches the string you used to name your hamlib rig:
+```
+  "ardop": {
+    "addr": "localhost:8515",
+    "arq_bandwidth": {
+      "Forced": false,
+      "Max": 2000
+    },
+    "connect_requests": 10,
+    "rig": "ftdx1200",
+    "ptt_ctrl": true,
+    "beacon_interval": 0,
+    "cwid_enabled": true
+  },
+```
+4. Find your rig's special code
+   For the Yaesu FTDX-1200 it's 1034. I found that by running:
+```you@yourmachine:~$ rigctl -l | grep -e FTDX-1200 -e Model
+ Rig #  Mfg                    Model                   Version         Status      Macro
+  1034  Yaesu                  FTDX-1200               20230328.5      Stable      RIG_MODEL_FTDX1200
+```
+6. Find your radio's baud rate. Mine's set to 38400
+7. If you see either of those magic numbers nywhere in the code below, replace them with yours.
+
 ## Quick start (script)
 
 Save as `~/pat-start.sh`, then `chmod +x ~/pat-start.sh` (once). Run with `~/pat-start.sh`, use Pat at http://localhost:8080, press **Ctrl-C** when done — the script kills everything and frees the ports.

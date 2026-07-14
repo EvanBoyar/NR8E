@@ -20,6 +20,7 @@ Note that the Pat wiki suggests that you
 >Consider Peter LaRue's fork [ardopcf](https://github.com/pflarue/ardop) instead. It includes many [improvements and bug fixes](https://github.com/pflarue/ardop/blob/master/changelog.md).
 
 I haven't tested this out, so ymmv
+
 3. Configre Pat (see below)
 
 # Below (Pat config)

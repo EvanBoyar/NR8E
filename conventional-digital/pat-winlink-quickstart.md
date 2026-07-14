@@ -51,14 +51,18 @@ I haven't tested this out, so ymmv
     "cwid_enabled": true
   },
 ```
-4. Find your rig's special code. For the Yaesu FTDX-1200 it's 1034. I found that by running:
+4a. Find your rig's special code. For the Yaesu FTDX-1200 it's 1034. I found that by running:
 ```
 you@yourmachine:~$ rigctl -l | grep -e FTDX-1200 -e Model
+```
+and got
+```
  Rig #  Mfg                    Model                   Version         Status      Macro
   1034  Yaesu                  FTDX-1200               20230328.5      Stable      RIG_MODEL_FTDX1200
 ```
-6. Find your radio's baud rate. Mine's set to 38400
-7. If you see either of those magic numbers nywhere in the code below, replace them with yours.
+4b. Find your radio's baud rate. Mine's set to 38400
+
+5. If you see either of those magic numbers nywhere in the code below, replace them with yours.
 
 ## Quick start (script)
 

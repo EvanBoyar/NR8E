@@ -66,7 +66,8 @@ and got
 
 ## Quick start (script)
 
-Save as `~/pat-start.sh`, then `chmod +x ~/pat-start.sh` (once). Run with `~/pat-start.sh`, use Pat at http://localhost:8080, press **Ctrl-C** when done — the script kills everything and frees the ports.
+Note this is a *usage* script, not one that configures things for you/gets you set up.  
+Save as `~/pat-start.sh`, then `chmod +x ~/pat-start.sh` (once). Run with `~/pat-start.sh`, use Pat at http://localhost:8080, press **Ctrl-C** when done after after which the script kills everything and frees the ports.
 
 ```bash
 #!/bin/bash
@@ -115,7 +116,7 @@ pat http
 
 Then browse to http://localhost:8080. Find stations with `pat rmslist ardop`.
 
-Key config (`~/.config/pat/config.json`) — the rig name must match everywhere:
+Key config (`~/.config/pat/config.json`): the rig name must match everywhere:
 
 ```json
 "hamlib_rigs": {
@@ -130,7 +131,7 @@ Key config (`~/.config/pat/config.json`) — the rig name must match everywhere:
 
 ## Radio settings
 
-- Mode: **DATA-U** (rear-jack audio, correct sideband). Pat's QSY changes frequency only — the band-stack may flip you back to LSB on 40m, so check the mode after every QSY.
+- Mode: **DATA-U** (rear-jack audio, correct sideband). Pat's QSY changes frequency only; the band-stack may flip you back to LSB on 40m, so check the mode after every QSY.
 - Drive level: alsamixer → `alsamixer -c Device` → Speaker slider. Set by listening on a second receiver: back off until the tones are clean, not harsh. Zero ALC with good power out (METER → PO) is ideal; overdrive kills decodes even though it "sounds strong."
 
 ## Troubleshooting
@@ -149,8 +150,8 @@ lsof /dev/snd/*                           # sound card owner (zombie QSSTV etc.)
 ```bash
 printf "f\n" | nc -q 1 127.0.0.1 4532     # should print dial freq in Hz
 ```
-- Hangs/times out → rigctld can't talk to the radio: port busy, radio off, wrong baud (radio menu 39 = 38400), or hardware handshake got re-enabled (keep `serial_handshake=None` — without it the FTdx backend raises RTS on open and **keys the radio instantly**, plus all CAT reads time out).
-- `rigctl -m 2` client says "No such file or directory" → often rigctld still starting up, or IPv6 localhost weirdness; use `127.0.0.1`, wait for `ss -ltn | grep 4532` to show LISTEN, or just use the `nc` test — Pat speaks to the socket the same way.
+- Hangs/times out → rigctld can't talk to the radio: port busy, radio off, wrong baud (radio menu 39 = 38400), or hardware handshake got re-enabled (keep `serial_handshake=None` as without it the FTdx backend raises RTS on open and **keys the radio instantly**, plus all CAT reads time out).
+- `rigctl -m 2` client says "No such file or directory" → often rigctld still starting up, or IPv6 localhost weirdness; use `127.0.0.1`, wait for `ss -ltn | grep 4532` to show LISTEN, or just use the `nc` test since Pat speaks to the socket the same way.
 
 **PTT alive?**
 ```bash
@@ -168,8 +169,8 @@ printf "T 1\n" | nc -q 1 127.0.0.1 4532
 speaker-test -D plughw:CARD=Device,DEV=0 -c 2 -t sine -f 1500   # Ctrl-C to stop
 printf "T 0\n" | nc -q 1 127.0.0.1 4532
 ```
-Keys but zero power → radio not in DATA-U, audio device muted (`MM` in alsamixer — press M), or wrong sound card. `Device or resource busy` → something else holds the card (see "Who's squatting?").
+Keys but zero power → radio not in DATA-U, audio device muted (`MM` in alsamixer: press M), or wrong sound card. `Device or resource busy` → something else holds the card (see "Who's squatting?").
 
-**Keys in short bursts ~10 times then "Connect timeout"?** That's normal shape for an unanswered connect. Check: clean (not overdriven) audio, DATA-U mode, real power out, then blame propagation — try other stations from `pat rmslist ardop`.
+**Keys in short bursts ~10 times then "Connect timeout"?** That's normal shape for an unanswered connect. Check: clean (not overdriven) audio, DATA-U mode, real power out, then blame propagation and try other stations from `pat rmslist ardop`.
 
 **`invalid character ':' after top-level value` on startup** → broken JSON in `~/.config/pat/config.json` (e.g. missing opening `{`). Validate: `python3 -m json.tool ~/.config/pat/config.json`.

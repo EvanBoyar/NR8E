@@ -8,7 +8,7 @@
 **The one rule:** only one program may own `/dev/ttyUSB0` (serial) or the sound card at a time. Close FLRig and QSSTV before starting Pat, and vice versa.
 
 # Installation
-1. Install Pat
+1. Install Pat  
 Go to the [latest release of Pat](https://github.com/la5nta/pat/releases/latest) and download the .deb and install as you would any normal .deb because it is a normal .deb.
 2. Install ARDOP:
 ```

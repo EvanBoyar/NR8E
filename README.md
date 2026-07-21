@@ -15,3 +15,7 @@ I realized I shouldn't keep all the info I've collected after banging my head ag
 [Trigeo](https://github.com/EvanBoyar/trigeo), an Android app for transmitter searches (AKA fox hunts).  
 [Solar Windsock](https://evanboyar.github.io/solar-windsock/), a  simple svg windsock that flaps harder when the solar wind blows more quickly
 
+## My Club (N2YCR)
+
+[Bylaws](./N2YCR/2025-12-27_N2YCR_Constitution_Bylaws.pdf)
+Note that in the bylaws there's a provision calling for the use of [STAR voting](https://www.equal.vote/star) in elections. I made a webapp to make paper ballot STAR voting easy called [Ocellus](https://evanboyar.github.io/ocellus). Try it out!

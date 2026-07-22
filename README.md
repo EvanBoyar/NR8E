@@ -22,4 +22,4 @@ I realized I shouldn't keep all the info I've collected after banging my head ag
 [Link to copy of the official constitution saved in my repo](./N2YCR/2025-12-27_N2YCR_Constitution_Bylaws.pdf)  
 [External official link to the official constitution in the Resistor wiki](https://wiki.nycresistor.com/images/2/2b/2025-12-27_N2YCR_Constitution_Bylaws.pdf)  
 
-Note that in the bylaws there's a provision calling for the use of [STAR voting](https://www.equal.vote/star) in elections. I made a webapp to make paper ballot STAR voting easy called [Ocellus](https://evanboyar.github.io/ocellus). Try it out! Also, here's an unofficial 
+Note that in the bylaws there's a provision calling for the use of [STAR voting](https://www.equal.vote/star) in elections. I made a webapp to make paper ballot STAR voting easy called [Ocellus](https://evanboyar.github.io/ocellus). Try it out!
